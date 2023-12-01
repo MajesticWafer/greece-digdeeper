@@ -24,6 +24,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
     }
     .section.active {
       opacity: 1;
@@ -47,21 +50,21 @@
       <p style="color: #5beda3; margin-left: 35px;">Scroll down to explore more</p>
     </div>
 
-  <div id="section1" class="section">
-    <div class="content">
-      <h2>Title 1</h2>
-      <p>Text and images fade and slide in as you scroll down</p>
-      <img src="image1.jpg" alt="Image 1">
+    <div id="section1" class="section">
+      <div class="content">
+        <h2>Title 1</h2>
+        <p>Text and images fade and slide in as you scroll down</p>
+        <img src="image1.jpg" alt="Image 1">
+      </div>
     </div>
-  </div>
 
-  <div id="section2" class="section">
-    <div class="content">
-      <h2>Title 2</h2>
-      <p>More content here</p>
-      <img src="image2.jpg" alt="Image 2">
+    <div id="section2" class="section">
+      <div class="content">
+        <h2>Title 2</h2>
+        <p>More content here</p>
+        <img src="image2.jpg" alt="Image 2">
+      </div>
     </div>
-  </div>
   </div>
 
   <!-- Add more sections as needed -->
