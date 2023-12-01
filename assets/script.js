@@ -1,11 +1,12 @@
-$(document).ready(function() {
-  $(window).on('scroll', function() {
-    $('.section').each(function() {
-      var bottom_of_element = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-      if (bottom_of_window > bottom_of_element) {
-        $(this).animate({'opacity':'1', 'margin-top':'0px'}, 1000);
+document.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight && top > 0) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
       }
     });
   });
