@@ -91,16 +91,16 @@
   <!-- Add more sections as needed -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-  window.addEventListener('scroll', function() {
-    var content = document.querySelector('.section');
-    var positionFromTop = content.getBoundingClientRect().top;
-
-    if (positionFromTop - window.innerHeight < 0) {
-      content.classList.add('slide');
-    }
-  });
-});
-
-  </script>
+      window.addEventListener('scroll', function() {
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+          var positionFromTop = section.getBoundingClientRect().top;
+          if (positionFromTop - window.innerHeight < 0) {
+            section.classList.add('slide');
+          }
+        });
+      });
+    });
+ </script>
 </body>
 </html>
