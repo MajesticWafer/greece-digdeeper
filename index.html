@@ -25,7 +25,7 @@
       justify-content: center;
       align-items: center;
       opacity: 0;
-      transform: translateY(20px), translateX(-100vh),;
+      transform: translateY(20px), translateX(-100vh);
       transition: opacity 0.5s, transform 0.5s;
     }
     .slide {
@@ -68,11 +68,11 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
-    var content = document.querySelector('.content');
+    var content = document.querySelector('.section');
     var positionFromTop = content.getBoundingClientRect().top;
 
     if (positionFromTop - window.innerHeight < 0) {
-      content.classList.add('animated');
+      content.classList.add('slide');
     }
   });
 });
