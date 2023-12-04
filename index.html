@@ -40,6 +40,10 @@
       opacity: 1;
       transform: translateX(0vh);
     }
+    .flip {
+      transform: rotateX(360deg);
+      transform: rotateZ(360deg);
+    }
     .container {
       width: 66.66%;
       margin: 0 40px;
@@ -106,6 +110,7 @@
           var positionFromTop = section.getBoundingClientRect().top;
           if (positionFromTop - window.innerHeight < 0) {
             section.classList.add('slide');
+            section.classList.add('flip');
           }
         });
       });
