@@ -113,8 +113,9 @@
       var sections = document.querySelectorAll('.section');
       sections.forEach(function(section) {
         var positionFromTop = section.getBoundingClientRect().top;
+        var positionFromBottom = section.getBoundingClientRect().bottom;
         var windowHeight = window.innerHeight;
-        if (positionFromTop - windowHeight < 0 && positionFromTop > -windowHeight/2) {
+        if (positionFromTop < windowHeight / 2 && positionFromBottom > windowHeight / 2) {
           section.classList.add('slide');
           section.classList.add('flip');
           section.classList.add('flip2');
@@ -123,5 +124,6 @@
     });
   });
 </script>
+
 </body>
 </html>
