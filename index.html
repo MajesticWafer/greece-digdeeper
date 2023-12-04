@@ -44,12 +44,10 @@
       transform: rotateY(360deg);
     }
     .tran2 {
-      transform: rotateZ(180deg);
-      transform: rotateZ(-180deg);
+      transform: rotateZ(360deg);
     }
     .tran3 {
-      transform: rotateX(-180deg)
-      transform: rotateX(180deg)
+      transform: rotateX(360deg)
     }
     .container {
       width: 66.66%;
@@ -119,7 +117,8 @@
         var windowHeight = window.innerHeight;
         if (positionFromTop < windowHeight / 2 && positionFromBottom > windowHeight / 2) {
           section.classList.add('slide');
-          section.classList.add('tran' + (Math.floor(Math.random() * 3) + 1));
+          var randomTran = Math.floor(Math.random() * 3) + 1;
+          section.classList.add('tran' + randomTran);
         }
       });
     });
