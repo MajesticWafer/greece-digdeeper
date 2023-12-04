@@ -44,6 +44,8 @@
       transform: rotateX(45deg);
       transform: rotateY(45deg);
       transform: rotateZ(360deg);
+    }
+    . flip2 {
       transform: rotateY(-45deg);
       transform: rotateX(-45deg);
     }
@@ -114,6 +116,7 @@
           if (positionFromTop - window.innerHeight < 0) {
             section.classList.add('slide');
             section.classList.add('flip');
+            section.classList.add('flip2');
           }
         });
       });
