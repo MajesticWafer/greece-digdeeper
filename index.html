@@ -113,7 +113,7 @@
         var sections = document.querySelectorAll('.section');
         sections.forEach(function(section) {
           var positionFromTop = section.getBoundingClientRect().top;
-          if (positionFromTop - window.innerHeight < 1465) {
+          if (positionFromTop - window.innerHeight < 0) {
             section.classList.add('slide');
             section.classList.add('flip');
             section.classList.add('flip2');
