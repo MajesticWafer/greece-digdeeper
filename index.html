@@ -37,14 +37,13 @@
       margin: 0 auto;
     }
     .tran-1 {
-      transform: translateX(-100%), scale(85%);
+      transform: scale(85%);
     }
     .tran-2 {
       opacity: 1;
     }
     .tran-end {
       transform: scale(100%);
-      transform: translateX(100%);
     }
     .container {
       width: 66.66%;
@@ -115,15 +114,15 @@
         if (positionFromTop < windowHeight / 2 && positionFromBottom > windowHeight / 2) {
           setTimeout(function() {
             section.classList.add('tran-1');
-          }, 0);
+          }, 100);
 
           setTimeout(function() {
             section.classList.add('tran-2');
-          }, 500);
+          }, 100);
           
           setTimeout(function() {
             section.classList.add('tran-end');
-          }, 1000);
+          }, 100);
         }
       });
     });
