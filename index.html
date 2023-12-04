@@ -107,20 +107,21 @@
   </div>
 
   <!-- Add more sections as needed -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      window.addEventListener('scroll', function() {
-        var sections = document.querySelectorAll('.section');
-        sections.forEach(function(section) {
-          var positionFromTop = section.getBoundingClientRect().top;
-          if (positionFromTop - window.innerHeight < 0) {
-            section.classList.add('slide');
-            section.classList.add('flip');
-            section.classList.add('flip2');
-          }
-        });
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+      var sections = document.querySelectorAll('.section');
+      sections.forEach(function(section) {
+        var positionFromTop = section.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+        if (positionFromTop - windowHeight < 0 && positionFromTop > -windowHeight/2) {
+          section.classList.add('slide');
+          section.classList.add('flip');
+          section.classList.add('flip2');
+        }
       });
     });
- </script>
+  });
+</script>
 </body>
 </html>
