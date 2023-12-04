@@ -41,22 +41,10 @@
       transform: translateX(0vh);
     }
     .tran1 {
-      transform: rotateY(180deg);
+      transform: scale(85%);
     }
-    .tran4 {
-      transform: rotateY(180deg);
-    }
-    .tran2 {
-      transform: rotateZ(180deg);
-    }
-    .tran4 {
-      transform: rotateZ(-180deg);
-    }
-    .tran3 {
-      transform: rotateX(-180)
-    }
-    .tran6 {
-      transform: rotateY(180deg);
+    .tran1-end {
+      transform: scale(100%);
     }
     .container {
       width: 66.66%;
@@ -126,9 +114,8 @@
         var windowHeight = window.innerHeight;
         if (positionFromTop < windowHeight / 2 && positionFromBottom > windowHeight / 2) {
           section.classList.add('slide');
-          var randomTran = Math.floor(Math.random() * 3) + 1;
+          var randomTran = Math.floor(Math.random() * 2) + 1;
           section.classList.add('tran' + randomTran);
-          section.classList.add('tran' + (randomTran * 1));
         }
       });
     });
