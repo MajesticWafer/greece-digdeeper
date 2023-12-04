@@ -41,13 +41,22 @@
       transform: translateX(0vh);
     }
     .tran1 {
-      transform: rotateY(360deg);
+      transform: rotateY(180deg);
+    }
+    .tran4 {
+      transform: rotateY(180deg);
     }
     .tran2 {
-      transform: rotateZ(360deg);
+      transform: rotateZ(180deg);
+    }
+    .tran4 {
+      transform: rotateZ(-180deg);
     }
     .tran3 {
-      transform: rotateX(360deg)
+      transform: rotateX(-180)
+    }
+    .tran6 {
+      transform: rotateY(180deg);
     }
     .container {
       width: 66.66%;
@@ -119,6 +128,7 @@
           section.classList.add('slide');
           var randomTran = Math.floor(Math.random() * 3) + 1;
           section.classList.add('tran' + randomTran);
+          section.classList.add('tran' + (randomTran * 1));
         }
       });
     });
